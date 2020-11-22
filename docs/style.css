@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+@media (max-width: 575.98px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+body {
+  background-color: #0d0d0d;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0 !important;
+}
+
+.inner-nav {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+}
+
+.navbar {
+  width: 80%;
+  height: auto;
+  padding: 1.5rem 0;
+  color: #fffffe;
+}
+.navbar .navbar-nav {
+  background-color: #121212;
+}
+.navbar .active {
+  text-decoration: underline;
+}
+.navbar a {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fffffe;
+}
+.navbar .navbar-nav a:hover {
+  color: #fffffe !important;
+}
+.navbar .logo a:hover {
+  color: #fffffe;
+  text-decoration: none;
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    width: 90%;
+    margin: 0 10px;
+  }
+  .navbar .navbar-toggler {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav {
+    margin-top: 1.5rem;
+    padding-top: 5px;
+    padding-left: 1rem;
+    background-color: #121212;
+    border-top: 2px solid #ABABAB;
+  }
+}
+.navbar .brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+.navbar .brand .logo {
+  padding: 10px;
+  border: 2px solid #fffffe;
+  margin-bottom: 0;
+}
+.navbar .brand .logo-text {
+  width: 20ch;
+  padding-left: 1rem;
+  margin: 0;
+  font-size: 1rem;
+}
+
+#hero {
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  padding-top: 2rem;
+  /* Media Queries
+  * @767.98px and 991.98px and below, The hero-carousel will have padding-top 0 to make it flush with the nav.
+  *
+  */
+}
+@media (max-width: 767.98px) {
+  #hero {
+    padding-top: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  #hero {
+    padding-top: 0;
+  }
+}
+
+.carousel-container {
+  width: 80%;
+  background-color: #121212;
+}
+.carousel-container li {
+  height: 2px;
+}
+.carousel-container .active {
+  background-color: #58ff73;
+  padding-top: 2px;
+}
+@media (max-width: 767.98px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
+@media (max-width: 991.98px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
+
+.carousel-item {
+  min-height: 45rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+  .carousel-item {
+    min-height: 35rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .carousel-item {
+    min-height: 25rem;
+  }
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fffffe;
+}
+.carousel-content h5 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 2.625rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 767.98px) {
+  .carousel-content h5 {
+    margin-bottom: 1rem;
+  }
+}
+.carousel-content p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ABABAB;
+  width: 70ch;
+  margin: 0 auto 2rem auto;
+}
+@media (max-width: 767.98px) {
+  .carousel-content p {
+    width: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  .carousel-content {
+    bottom: 5rem;
+    width: auto;
+  }
+}
+.carousel-content .btn {
+  background-color: #58ff73;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  border-color: #58ff73;
+  color: #0d0d0d;
+}
+.carousel-content .btn:hover {
+  background-color: #ABABAB;
+  border-color: #ABABAB;
+}
+
+/*# sourceMappingURL=style.css.map */

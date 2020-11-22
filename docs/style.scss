@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
+/*
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+ */
+
+$mobile: 575.98px;
+$landscape: 767.98px;
+$laptop: 992px;
+$desktop: 1199.98px;
+
+
+
 
 //Foreground Colors
 $primary-color: #0d0d0d;
@@ -57,7 +78,7 @@ $gk-color:#fb6d06;
 
 html
 {
-  @media (max-width:575.98px)
+  @media (max-width:$mobile)
   {
     font-size: 90%;
   }
@@ -87,7 +108,7 @@ body
 
 .inner-nav
 {
-  width: 100vw;
+  width: 100%;
   @include flex-center();
   background-color: $secondary-color;
 }
@@ -134,7 +155,7 @@ body
   }
 
   // Extra small devices (portrait phones, less than 576px)
-  @media (max-width: 575.98px)
+  @media (max-width: $mobile)
   {
     width: 90%;
     margin: 0 10px;
@@ -197,24 +218,23 @@ body
 
 #hero
 {
-  width: 100vw;
+  width: 100%;
   display: grid;
   place-items: center;
   padding-top: 2rem;
-
   /* Media Queries
   * @767.98px and 991.98px and below, The hero-carousel will have padding-top 0 to make it flush with the nav.
   *
   */
 
   // Small devices (landscape phones, less than 768px)
-  @media (max-width:767.98px)
+  @media (max-width:$landscape)
   {
     padding-top: 0;
   }
 
   // Medium devices (tablets, less than 992px)
-  @media (max-width: 991.98px)
+  @media (max-width: $laptop)
   {
     padding-top: 0;
   }
@@ -247,14 +267,14 @@ body
 
   //At 767.98px width, carousel will span 100% of viewport
   // Small devices (landscape phones, less than 768px)
-  @media (max-width:767.98px)
+  @media (max-width: $landscape)
   {
     width: 100%;
   }
 
   //At 992px width, carousel will span 100% of viewport
   // Medium devices (tablets, less than 992px)
-  @media (max-width: 991.98px)
+  @media (max-width: $laptop)
   {
     width: 100%;
   }
@@ -271,12 +291,12 @@ body
   background-size: cover;
   position: relative;
 
-  @media (max-width:767.98px)
+  @media (max-width:$landscape)
   {
     min-height: 35rem;
   }
 
-  @media (max-width: 575.98px)
+  @media (max-width: $mobile)
   {
 
     min-height: 25rem;
@@ -286,6 +306,7 @@ body
 
 .carousel-content
 {
+
   position: absolute;
   bottom: 5rem;
   left: 0;
@@ -298,7 +319,7 @@ body
     font-size: 2.625rem;
     margin-bottom: 2rem;
 
-    @media (max-width:767.98px)
+    @media (max-width:$landscape)
     {
       margin-bottom: 1rem;
     }
@@ -312,7 +333,7 @@ body
     width: 70ch;
     margin: 0 auto 2rem auto;
 
-    @media (max-width:767.98px)
+    @media (max-width:$landscape)
     {
       width: auto;
     }
@@ -339,3 +360,135 @@ body
     border-color: $muted-text;
   }
 }
+
+
+
+
+
+#home-featured
+{
+
+  @include flex-center();
+  margin: 5rem 0;
+
+  .featured-cards
+  {
+    margin-top: 1rem;
+
+    span
+    {
+      font-size: .75rem;
+      @include font-black();
+    }
+  }
+}
+.home-featured-container
+{
+  width: 80%;
+
+  @media (max-width: $laptop)
+  {
+    width: 80%;
+  }
+  @media (max-width: $mobile) {
+    width: 90%;
+
+  }
+
+  h1
+  {
+    color: $text;
+    font-size: 1.625rem;
+    border-bottom: 1px solid $muted-text;
+    padding-bottom: .5rem;
+  }
+
+  #cat-ds
+  {
+    color: $ds-color;
+  }
+  #cat-ip
+  {
+    color: $ip-color;
+  }
+  #cat-gk
+  {
+    color: $gk-color;
+  }
+
+}
+
+.featured-cards-inner
+{
+  //background-color: #fb6d06;
+  display: grid;
+  grid-template-columns: 1fr .3fr;
+  grid-column-gap: 1rem;
+  max-height: 30vh;
+  color: white;
+  margin-top: 1rem;
+
+  -webkit-box-orient: vertical;
+
+
+  .featured-card-content
+  {
+
+    .card-date
+    {
+      color: $muted-text;
+      font-size: .75rem;
+    }
+
+
+    .card-title a
+    {
+      color: $text;
+      font-size: 1.25rem;
+      @include font-bold();
+
+      @media (max-width: $laptop)
+      {
+        font-size: 1.625rem;
+      }
+
+
+    }
+
+
+    .card-author
+    {
+      color: $muted-text;
+      font-size: .75rem;
+    }
+
+
+  }
+
+  .featured-card-img
+  {
+    background-color: #58ff73;
+    @media (max-width: $laptop)
+    {
+      height: 90px;
+      width: 100%;
+    }
+    @media (max-width: $mobile)
+    {
+      height: 80px;
+      width: 100px;
+
+    }
+
+
+    height: 80px;
+    width: 100px;
+
+    background-size: cover;
+    background-position: center;
+
+  }
+
+}
+
+

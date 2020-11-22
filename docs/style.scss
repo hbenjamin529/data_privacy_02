@@ -104,6 +104,9 @@ body
   .navbar-nav
   {
     background-color: $secondary-color;
+    a{
+      text-transform: uppercase;
+    }
   }
 
   .active
@@ -115,7 +118,7 @@ body
   {
     font-size: 1rem;
     @include font-bold();
-    text-transform: uppercase;
+
     color: $text;
   }
 

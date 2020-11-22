@@ -35,6 +35,9 @@ body {
 .navbar .navbar-nav {
   background-color: #121212;
 }
+.navbar .navbar-nav a {
+  text-transform: uppercase;
+}
 .navbar .active {
   text-decoration: underline;
 }
@@ -42,7 +45,6 @@ body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
   color: #fffffe;
 }
 .navbar .navbar-nav a:hover {

@@ -120,7 +120,6 @@ body {
   height: 2px;
 }
 .carousel-container .active {
-  background-color: #58ff73;
   padding-top: 2px;
 }
 @media (max-width: 767.98px) {

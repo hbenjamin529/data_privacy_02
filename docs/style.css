@@ -186,7 +186,7 @@ body {
 @media (max-width: 767.98px) {
   .carousel-content {
     bottom: 5rem;
-    width: auto;
+    width: 90%;
   }
 }
 .carousel-content .btn {

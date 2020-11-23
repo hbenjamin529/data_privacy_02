@@ -712,6 +712,8 @@ body
 
 }
 
+
+
 #home-about
 {
   border-top: .5px solid rgba(255,255,255,.4);
@@ -724,7 +726,12 @@ body
   @include flex-center();
   flex-direction: column;
   padding-top: 7rem;
-  padding-bottom: 10rem;
+  padding-bottom: 7rem;
+  @media (max-width: $landscape)
+  {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 .home-about-row
 {
@@ -737,8 +744,6 @@ body
    width: 90%;
   }
 }
-
-
 .home-about-col
 {
   height: auto;
@@ -794,5 +799,78 @@ body
     }
   }
 
+}
 
+#trivia
+{
+
+}
+.trivia-container
+{
+  border-top: .5px solid rgba(255,255,255,.4);
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+  @media (max-width: $landscape)
+  {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  h1
+  {
+    font-size: 1.625rem;
+    color: $text;
+    padding-bottom: 2rem;
+  }
+
+}
+.trivia-row
+{
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .trivia-item
+  {
+    @media (max-width: $landscape)
+    {
+     margin-bottom: 2rem;
+    }
+  }
+}
+
+.trivia-box
+{
+  width: 268px;
+  height: 90px;
+  background-color: $secondary-color;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  p:nth-child(1)
+  {
+    padding-top: 1rem;
+    color: $paragraph;
+    font-size: 12px;
+    width: 210px;
+    @include font-bold();
+  }
+  .emoji
+  {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 1.3rem;
+  }
+}
+
+
+
+.footer
+{
+  font-size: .75rem;
+  background-color: $secondary-color;
+  color: $muted-text;
 }

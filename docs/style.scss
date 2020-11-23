@@ -711,3 +711,88 @@ body
 
 
 }
+
+#home-about
+{
+  border-top: .5px solid rgba(255,255,255,.4);
+
+
+
+}
+.home-about-container
+{
+  @include flex-center();
+  flex-direction: column;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.home-about-row
+{
+  width: 100%;
+  //background-color: #121212;
+  min-height: 60vh;
+  @include flex-center();
+  @media (max-width: $landscape)
+  {
+   width: 90%;
+  }
+}
+
+
+.home-about-col
+{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  @media (max-width: $landscape)
+  {
+    padding: 0;
+  }
+
+
+  .home-about-inner
+  {
+    height: 100%;
+    width: 80%;
+    //background-color: #fffffe;
+    @media (max-width: $landscape)
+    {
+      width: 100%;
+    }
+
+    .home-about-inner-img
+    {
+      height: 25rem;
+      width: 100%;
+      background-image: url("img/Saly-21.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+    .home-about-inner-text
+    {
+      padding: 2rem 0;
+      h1
+      {
+        font-size: 2.063rem;
+        @include font-medium();
+        color: $heading;
+        line-height: 52px;
+        padding-bottom: 1rem;
+      }
+      p
+      {
+        font-size: 1rem;
+        @include font-regular();
+        color: $muted-text;
+        line-height: 27px;
+      }
+    }
+  }
+
+
+}

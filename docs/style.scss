@@ -491,24 +491,20 @@ body
 //Article Contents
 .article-container
 {
-  width: 100%;
+
+  width: 80%;
+  margin: 0 auto;
   @include flex-center();
+
+
 }
 
 
 .template-article-row
 {
   margin-top: 5rem;
-  width: 80%;
-  @media (max-width: $mobile)
-  {
-    width: 100%;
-  }
-  @media (max-width: $laptop)
-  {
-    width: 100%;
-  }
-  @media (max-width: $desktop)
+  width: 100%;
+  @media (min-width: 1440px)
   {
     width: 80%;
   }
@@ -521,8 +517,6 @@ body
   width: 80%;
   color: $text;
 
-
-
   .cat
   {
     font-size: 1rem;
@@ -531,10 +525,12 @@ body
     text-decoration: underline;
     text-transform: uppercase;
   }
+
   @media (max-width: $desktop)
   {
     width: 80%;
   }
+
   @media (max-width: $mobile)
   {
     width: 100%;
@@ -635,36 +631,35 @@ body
 //Article Feature Cards
 .article-sidebar
 {
-
-  display:flex;
-  align-items: flex-end;
-  flex-direction: column;
-
-  @media (max-width: $laptop)
-  {
-    margin-bottom: 3rem;
-    width: 90%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  @media (max-width: $landscape)
-  {
-    margin-bottom: 3rem;
+  
+  @media (max-width: $desktop) {
     width: 100%;
-    flex-direction: column;
-    padding: 0;
+    align-items: end;
+
   }
+
+  @media (max-width: 1199px) and (min-width: 992px)
+  {
+    align-items: flex-end;
+  }
+
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 0 auto;
+
+
+
+
 
 }
 .article-featured
 {
-  width: 20rem;
+  width: 18rem;
 
   span
   {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: $text;
     @include font-bold();
     text-decoration: underline;

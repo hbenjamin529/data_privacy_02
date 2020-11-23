@@ -314,7 +314,8 @@ body {
 
 /* Category Global Styling */
 .article-container {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,19 +323,9 @@ body {
 
 .template-article-row {
   margin-top: 5rem;
-  width: 80%;
+  width: 100%;
 }
-@media (max-width: 575.98px) {
-  .template-article-row {
-    width: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .template-article-row {
-    width: 100%;
-  }
-}
-@media (max-width: 1199.98px) {
+@media (min-width: 1440px) {
   .template-article-row {
     width: 80%;
   }
@@ -437,30 +428,25 @@ body {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  margin: 0 auto;
 }
-@media (max-width: 992px) {
+@media (max-width: 1199.98px) {
   .article-sidebar {
-    margin-bottom: 3rem;
-    width: 90%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    align-items: end;
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199px) and (min-width: 992px) {
   .article-sidebar {
-    margin-bottom: 3rem;
-    width: 100%;
-    flex-direction: column;
-    padding: 0;
+    align-items: flex-end;
   }
 }
 
 .article-featured {
-  width: 20rem;
+  width: 18rem;
 }
 .article-featured span {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #fffffe;
   font-family: "Roboto", sans-serif;
   font-weight: 700;

@@ -79,7 +79,7 @@ html
 {
   @media (max-width:$mobile)
   {
-    font-size: 90%;
+    font-size: 95%;
   }
 }
 
@@ -101,7 +101,7 @@ body
 }
 
 
-//GLOBAL STYLING FOR NAVIGATION//
+/* Start of Global Styling for Navigation Bar*/
 
 //sets the container of the main navigation to have 100% width
 
@@ -210,9 +210,13 @@ body
 
 }
 
-//GLOBAL STYLING FOR NAVIGATION//
+
+/* End of Global Styling for Navigation Bar*/
 
 
+/* Start of Homepage Styling*/
+
+//Hero Sytling (Carousel)
 #hero
 {
   width: 100%;
@@ -355,7 +359,7 @@ body
 
 }
 
-
+//Homepage featured items
 #home-featured
 {
 
@@ -396,7 +400,6 @@ body
 
 
 }
-
 .featured-cards-inner
 {
   //background-color: #fb6d06;
@@ -424,7 +427,7 @@ body
     {
       color: $text;
       font-size: 1.25rem;
-      @include font-bold();
+      @include font-medium();
 
       @media (max-width: $laptop)
       {
@@ -470,6 +473,156 @@ body
 
 }
 
+//About Section
+#home-about
+{
+  border-top: .5px solid rgba(255,255,255,.4);
+
+
+
+}
+.home-about-container
+{
+  @include flex-center();
+  flex-direction: column;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  @media (max-width: $landscape)
+  {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+.home-about-row
+{
+  width: 100%;
+  min-height: 60vh;
+  @include flex-center();
+  @media (max-width: $landscape)
+  {
+    width: 90%;
+  }
+}
+.home-about-col
+{
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  @media (max-width: $landscape)
+  {
+    padding: 0;
+  }
+
+
+  .home-about-inner
+  {
+    height: 100%;
+    width: 80%;
+    @media (max-width: $landscape)
+    {
+      width: 100%;
+    }
+
+    .home-about-inner-img
+    {
+      height: 25rem;
+      width: 100%;
+      background-image: url("img/Saly-21.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .home-about-inner-text
+    {
+      padding: 2rem 0;
+      h1
+      {
+        font-size: 2.063rem;
+        @include font-medium();
+        color: $heading;
+        line-height: 52px;
+        padding-bottom: 1rem;
+      }
+      p
+      {
+        font-size: 1rem;
+        @include font-regular();
+        color: $muted-text;
+        line-height: 27px;
+      }
+    }
+  }
+
+}
+
+//Trivia Section
+.trivia-container
+{
+  border-top: .5px solid rgba(255,255,255,.4);
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+  @media (max-width: $landscape)
+  {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  h1
+  {
+    font-size: 1.625rem;
+    color: $text;
+    padding-bottom: 2rem;
+  }
+
+}
+.trivia-row
+{
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .trivia-item
+  {
+    @media (max-width: $landscape)
+    {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.trivia-box
+{
+  width: 268px;
+  height: 90px;
+  background-color: $secondary-color;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  p:nth-child(1)
+  {
+    padding-top: 1rem;
+    color: $paragraph;
+    font-size: 12px;
+    width: 210px;
+    @include font-bold();
+  }
+  .emoji
+  {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    font-size: 1.3rem;
+  }
+}
+/* End of Homepage Styling*/
 
 /* Category Title Global Styling */
 .cat
@@ -490,8 +643,19 @@ body
 {
   color: $gk-color;
 }
+
+
+.footer
+{
+  font-size: .75rem;
+  background-color: $secondary-color;
+  color: $muted-text;
+}
 /* Category Global Styling */
 
+
+
+/* Start of Article Template Styling*/
 //Article Contents
 .article-container
 {
@@ -499,11 +663,7 @@ body
   width: 80%;
   margin: 0 auto;
   @include flex-center();
-
-
 }
-
-
 .template-article-row
 {
   margin-top: 5rem;
@@ -514,8 +674,6 @@ body
   }
 
 }
-
-
 .article-body
 {
   width: 80%;
@@ -630,7 +788,7 @@ body
 
 }
 
-//Article Feature Cards
+//Side bar
 .article-sidebar
 {
   
@@ -713,162 +871,141 @@ body
 
 
 }
+/* Start of Article Template Styling*/
 
 
 
-#home-about
+/* Start of Topic Page Styling*/
+
+.topics-header
 {
-  border-top: .5px solid rgba(255,255,255,.4);
-
-
-
-}
-.home-about-container
-{
-  @include flex-center();
-  flex-direction: column;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-  @media (max-width: $landscape)
-  {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-.home-about-row
-{
-  width: 100%;
-  //background-color: #121212;
-  min-height: 60vh;
-  @include flex-center();
-  @media (max-width: $landscape)
-  {
-   width: 90%;
-  }
-}
-.home-about-col
-{
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  @media (max-width: $landscape)
-  {
-    padding: 0;
-  }
-
-
-  .home-about-inner
-  {
-    height: 100%;
-    width: 80%;
-    //background-color: #fffffe;
-    @media (max-width: $landscape)
-    {
-      width: 100%;
-    }
-
-    .home-about-inner-img
-    {
-      height: 25rem;
-      width: 100%;
-      background-image: url("img/Saly-21.png");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-
-    .home-about-inner-text
-    {
-      padding: 2rem 0;
-      h1
-      {
-        font-size: 2.063rem;
-        @include font-medium();
-        color: $heading;
-        line-height: 52px;
-        padding-bottom: 1rem;
-      }
-      p
-      {
-        font-size: 1rem;
-        @include font-regular();
-        color: $muted-text;
-        line-height: 27px;
-      }
-    }
-  }
-
-}
-
-
-.trivia-container
-{
-  border-top: .5px solid rgba(255,255,255,.4);
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-  @media (max-width: $landscape)
-  {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
   h1
   {
-    font-size: 1.625rem;
-    color: $text;
-    padding-bottom: 2rem;
-  }
-
-}
-.trivia-row
-{
-  height: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .trivia-item
-  {
-    @media (max-width: $landscape)
+    font-size: 2.625rem;
+    @include font-black();
+    color: $heading;
+    width: 100%;
+    @media (min-width: $laptop)
     {
-     margin-bottom: 2rem;
+      width: 60%;
     }
   }
+
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: solid .5px rgba(255,255,255,.5);
 }
 
-.trivia-box
+.topic-cards
 {
-  width: 268px;
-  height: 90px;
+  padding-bottom: 2rem;
+  border-bottom: solid .5px rgba(255,255,255,.5);
+  margin-bottom: 5rem;
+}
+
+.topic-card-header
+{
+  width: 100%;
   background-color: $secondary-color;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem auto;
-  p:nth-child(1)
+  padding: 1rem;
+  margin: 2rem 0;
+  h1
   {
-    padding-top: 1rem;
-    color: $paragraph;
-    font-size: 12px;
-    width: 210px;
-    @include font-bold();
-  }
-  .emoji
-  {
-    position: absolute;
-    bottom: -10px;
-    right: 10px;
     font-size: 1.3rem;
+    @include font-bold();
+    width: 100%;
+    line-height: 33px;
+    @media (min-width: $landscape)
+    {
+      width: 60%;
+    }
+    margin: 0;
+  }
+
+  p
+  {
+    font-size: 1rem;
+    color: $muted-text;
+    width: 100%;
+    @media (min-width: $landscape)
+    {
+      width: 60%;
+    }
+
+    margin: 0;
+    line-height: 27px;
   }
 }
 
-
-.footer
+.topic-article-items
 {
-  font-size: .75rem;
-  background-color: $secondary-color;
-  color: $muted-text;
+  margin: 1rem;
+  color: $text;
+  width: 300px;
+
+  @media (max-width: $landscape)
+  {
+    width: 100%;
+  }
+
+  li:nth-child(1), li:nth-child(4)
+  {
+    font-size: .75rem;
+    color: $muted-text;
+
+  }
+
+  @media (max-width: $landscape)
+  {
+    width: 100%;
+  }
+
+
 }
+.topic-article-title
+{
+
+  height: auto;
+  width: 250px;
+  padding: 1rem 0;
+
+  @media (max-width: $landscape)
+  {
+    width: 80%;
+  }
+
+  h1,a
+  {
+    width: 250px;
+    font-size: 1.3rem;
+    padding-right: 1rem;
+    color: $text;
+    @include font-medium();
+  }
+
+  .img-box
+  {
+    background-color: #fffffe;
+    width: 61px;
+    height: 55px;
+    background-position: center;
+    background-size: cover;
+
+  }
+
+}
+
+.topic-article-items p
+{
+    width: 261px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    line-height: 27px;
+}
+
+/* End of Topic Page Styling*/

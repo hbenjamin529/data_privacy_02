@@ -14,7 +14,7 @@
  */
 @media (max-width: 575.98px) {
   html {
-    font-size: 90%;
+    font-size: 95%;
   }
 }
 
@@ -31,6 +31,7 @@ body {
   padding: 0 !important;
 }
 
+/* Start of Global Styling for Navigation Bar*/
 .inner-nav {
   width: 100%;
   display: flex;
@@ -106,6 +107,8 @@ body {
   font-size: 1rem;
 }
 
+/* End of Global Styling for Navigation Bar*/
+/* Start of Homepage Styling*/
 #hero {
   width: 100%;
   display: grid;
@@ -269,7 +272,7 @@ body {
   color: #fffffe;
   font-size: 1.25rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
 }
 @media (max-width: 992px) {
   .featured-cards-inner .featured-card-content .card-title a {
@@ -300,6 +303,143 @@ body {
   }
 }
 
+#home-about {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.home-about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+@media (max-width: 767.98px) {
+  .home-about-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.home-about-row {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .home-about-row {
+    width: 90%;
+  }
+}
+
+.home-about-col {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+@media (max-width: 767.98px) {
+  .home-about-col {
+    padding: 0;
+  }
+}
+.home-about-col .home-about-inner {
+  height: 100%;
+  width: 80%;
+}
+@media (max-width: 767.98px) {
+  .home-about-col .home-about-inner {
+    width: 100%;
+  }
+}
+.home-about-col .home-about-inner .home-about-inner-img {
+  height: 25rem;
+  width: 100%;
+  background-image: url("img/Saly-21.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+}
+.home-about-col .home-about-inner .home-about-inner-text {
+  padding: 2rem 0;
+}
+.home-about-col .home-about-inner .home-about-inner-text h1 {
+  font-size: 2.063rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #FFFFFE;
+  line-height: 52px;
+  padding-bottom: 1rem;
+}
+.home-about-col .home-about-inner .home-about-inner-text p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #ABABAB;
+  line-height: 27px;
+}
+
+.trivia-container {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+  padding-top: 3rem;
+  padding-bottom: 7rem;
+}
+@media (max-width: 767.98px) {
+  .trivia-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+.trivia-container h1 {
+  font-size: 1.625rem;
+  color: #fffffe;
+  padding-bottom: 2rem;
+}
+
+.trivia-row {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .trivia-row .trivia-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.trivia-box {
+  width: 268px;
+  height: 90px;
+  background-color: #121212;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+}
+.trivia-box p:nth-child(1) {
+  padding-top: 1rem;
+  color: #dcdcdc;
+  font-size: 12px;
+  width: 210px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.trivia-box .emoji {
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  font-size: 1.3rem;
+}
+
+/* End of Homepage Styling*/
 /* Category Title Global Styling */
 .cat {
   font-size: 0.75rem;
@@ -320,7 +460,14 @@ body {
   color: #fb6d06;
 }
 
+.footer {
+  font-size: 0.75rem;
+  background-color: #121212;
+  color: #ABABAB;
+}
+
 /* Category Global Styling */
+/* Start of Article Template Styling*/
 .article-container {
   width: 80%;
   margin: 0 auto;
@@ -501,144 +648,122 @@ body {
   font-weight: 700;
 }
 
-#home-about {
-  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+/* Start of Article Template Styling*/
+/* Start of Topic Page Styling*/
+.topics-header {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  border-bottom: solid 0.5px rgba(255, 255, 255, 0.5);
 }
-
-.home-about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-@media (max-width: 767.98px) {
-  .home-about-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-.home-about-row {
+.topics-header h1 {
+  font-size: 2.625rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: #FFFFFE;
   width: 100%;
-  min-height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-@media (max-width: 767.98px) {
-  .home-about-row {
-    width: 90%;
+@media (min-width: 992px) {
+  .topics-header h1 {
+    width: 60%;
   }
 }
 
-.home-about-col {
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
+.topic-cards {
+  padding-bottom: 2rem;
+  border-bottom: solid 0.5px rgba(255, 255, 255, 0.5);
+  margin-bottom: 5rem;
 }
-@media (max-width: 767.98px) {
-  .home-about-col {
-    padding: 0;
+
+.topic-card-header {
+  width: 100%;
+  background-color: #121212;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.topic-card-header h1 {
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  width: 100%;
+  line-height: 33px;
+  margin: 0;
+}
+@media (min-width: 767.98px) {
+  .topic-card-header h1 {
+    width: 60%;
   }
 }
-.home-about-col .home-about-inner {
-  height: 100%;
-  width: 80%;
+.topic-card-header p {
+  font-size: 1rem;
+  color: #ABABAB;
+  width: 100%;
+  margin: 0;
+  line-height: 27px;
+}
+@media (min-width: 767.98px) {
+  .topic-card-header p {
+    width: 60%;
+  }
+}
+
+.topic-article-items {
+  margin: 1rem;
+  color: #fffffe;
+  width: 300px;
 }
 @media (max-width: 767.98px) {
-  .home-about-col .home-about-inner {
+  .topic-article-items {
     width: 100%;
   }
 }
-.home-about-col .home-about-inner .home-about-inner-img {
-  height: 25rem;
-  width: 100%;
-  background-image: url("img/Saly-21.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.topic-article-items li:nth-child(1), .topic-article-items li:nth-child(4) {
+  font-size: 0.75rem;
+  color: #ABABAB;
 }
-.home-about-col .home-about-inner .home-about-inner-text {
-  padding: 2rem 0;
+@media (max-width: 767.98px) {
+  .topic-article-items {
+    width: 100%;
+  }
 }
-.home-about-col .home-about-inner .home-about-inner-text h1 {
-  font-size: 2.063rem;
+
+.topic-article-title {
+  height: auto;
+  width: 250px;
+  padding: 1rem 0;
+}
+@media (max-width: 767.98px) {
+  .topic-article-title {
+    width: 80%;
+  }
+}
+.topic-article-title h1, .topic-article-title a {
+  width: 250px;
+  font-size: 1.3rem;
+  padding-right: 1rem;
+  color: #fffffe;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #FFFFFE;
-  line-height: 52px;
-  padding-bottom: 1rem;
 }
-.home-about-col .home-about-inner .home-about-inner-text p {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #ABABAB;
+.topic-article-title .img-box {
+  background-color: #fffffe;
+  width: 61px;
+  height: 55px;
+  background-position: center;
+  background-size: cover;
+}
+
+.topic-article-items p {
+  width: 261px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
   line-height: 27px;
 }
 
-.trivia-container {
-  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-}
-@media (max-width: 767.98px) {
-  .trivia-container {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-.trivia-container h1 {
-  font-size: 1.625rem;
-  color: #fffffe;
-  padding-bottom: 2rem;
-}
-
-.trivia-row {
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (max-width: 767.98px) {
-  .trivia-row .trivia-item {
-    margin-bottom: 2rem;
-  }
-}
-
-.trivia-box {
-  width: 268px;
-  height: 90px;
-  background-color: #121212;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem auto;
-}
-.trivia-box p:nth-child(1) {
-  padding-top: 1rem;
-  color: #dcdcdc;
-  font-size: 12px;
-  width: 210px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-.trivia-box .emoji {
-  position: absolute;
-  bottom: -10px;
-  right: 10px;
-  font-size: 1.3rem;
-}
-
-.footer {
-  font-size: 0.75rem;
-  background-color: #121212;
-  color: #ABABAB;
-}
+/* End of Topic Page Styling*/
 
 /*# sourceMappingURL=style.css.map */

@@ -684,7 +684,15 @@ body
 {
   width: 80%;
   color: $text;
-
+  p a:nth-child(1)
+  {
+    color: $text;
+    text-decoration: underline;
+  }
+  p a:nth-child(1):hover
+  {
+    color: $muted-text;
+  }
   .cat
   {
     font-size: 1rem;
@@ -788,6 +796,13 @@ body
       line-height: 27px;
       color: $paragraph;
     }
+
+    @media (max-width: $laptop)
+    {
+      border-bottom: 0.5px solid rgba(255,255,255, .5);
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
   }
 
 
@@ -797,7 +812,8 @@ body
 .article-sidebar
 {
   
-  @media (max-width: $desktop) {
+  @media (max-width: $desktop)
+  {
     width: 100%;
     align-items: end;
 
@@ -812,15 +828,18 @@ body
     align-items: flex-end;
     flex-direction: column;
     margin: 0 auto;
-
-
-
+  
+  @media (min-width: $laptop)
+  {
+    padding-top: 10rem;
+  }
 
 
 }
 .article-featured
 {
   width: 18rem;
+
 
   span
   {
@@ -863,6 +882,11 @@ body
       font-size: 1rem;
       @include font-medium();
       text-decoration: underline;
+    }
+
+    li a:hover
+    {
+      color: $muted-text;
     }
 
     .more-resources li

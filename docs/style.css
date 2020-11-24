@@ -58,7 +58,7 @@ body {
 .navbar a {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   color: #fffffe;
 }
 .navbar .navbar-nav a:hover {
@@ -93,7 +93,7 @@ body {
   flex-direction: row;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 900;
+  font-weight: 700;
 }
 .navbar .brand .logo {
   padding: 10px;
@@ -105,6 +105,12 @@ body {
   padding-left: 1rem;
   margin: 0;
   font-size: 1rem;
+}
+.navbar .brand a {
+  color: #fffffe;
+}
+.navbar .brand a:hover {
+  color: #ABABAB;
 }
 
 /* End of Global Styling for Navigation Bar*/
@@ -131,7 +137,6 @@ body {
 }
 #hero .carousel-container {
   width: 80%;
-  background-color: #121212;
 }
 #hero .carousel-container li {
   height: 2px;
@@ -280,11 +285,10 @@ body {
   }
 }
 .featured-cards-inner .featured-card-content .card-author {
-  color: #ABABAB;
+  color: #dcdcdc;
   font-size: 0.75rem;
 }
 .featured-cards-inner .featured-card-img {
-  background-color: #58ff73;
   height: 80px;
   width: 100px;
   background-size: cover;
@@ -538,7 +542,6 @@ body {
   border-bottom: 1px solid #ABABAB;
 }
 .article-body .author-card .article-author-img {
-  background-color: #58ff73;
   width: 64px;
   height: 64px;
   background-size: cover;
@@ -746,7 +749,6 @@ body {
   font-weight: 500;
 }
 .topic-article-title .img-box {
-  background-color: #fffffe;
   width: 61px;
   height: 55px;
   background-position: center;
@@ -765,5 +767,61 @@ body {
 }
 
 /* End of Topic Page Styling*/
+.team-container {
+  width: 80%;
+  margin: 8rem auto;
+}
+@media (max-width: 992px) {
+  .team-container {
+    width: 100%;
+  }
+}
+
+.team-header {
+  text-align: center;
+  color: #fffffe;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+@media (min-width: 992px) {
+  .team-header {
+    width: 60%;
+  }
+}
+
+.team-box {
+  width: 487px;
+  margin: 2rem 0;
+}
+.team-box .team-img {
+  background-position: center;
+  width: 100%;
+}
+.team-box .team-content {
+  width: 80%;
+  height: auto;
+}
+.team-box .team-content li:nth-child(2) {
+  font-size: 1.625rem;
+  line-height: 33px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #fffffe;
+}
+.team-box .team-content li:nth-child(3) {
+  color: #ABABAB;
+  font-size: 0.75rem;
+  line-height: 20px;
+  padding-bottom: 1rem;
+}
+.team-box .team-content li:nth-child(4) {
+  color: #fffffe;
+  font-size: 1rem;
+  line-height: 27px;
+}
+.team-box .team-content a:hover {
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */

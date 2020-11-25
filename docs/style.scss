@@ -124,7 +124,8 @@ body
   .navbar-nav
   {
     background-color: $secondary-color;
-    a{
+    a
+    {
       text-transform: uppercase;
     }
   }
@@ -137,8 +138,7 @@ body
   a
   {
     font-size: 1rem;
-    @include font-bold();
-
+    @include font-black();
     color: $text;
   }
 
@@ -188,12 +188,22 @@ body
     align-items: center;
     flex-direction: row;
     margin: 0;
-    @include font-black();
+    @include font-bold();
     .logo
     {
       padding: 10px;
       border: 2px solid #fffffe;
       margin-bottom: 0;
+
+
+    }
+
+    .logo:hover {
+      background-color: $text;
+      a
+      {
+        color: $primary-color;
+      }
     }
 
     .logo-text
@@ -203,8 +213,14 @@ body
       margin: 0;
       font-size: 1rem;
     }
+    a
+    {
+      color: $text;
+    }
+
 
   }
+
 
 
 
@@ -216,7 +232,7 @@ body
 
 /* Start of Homepage Styling*/
 
-//Hero Sytling (Carousel)
+//Hero Styling (Carousel)
 #hero
 {
   width: 100%;
@@ -245,7 +261,6 @@ body
 
 
     width: 80%;
-    background-color: $secondary-color;
 
     //Add additional height to indications
     li
@@ -402,7 +417,6 @@ body
 }
 .featured-cards-inner
 {
-  //background-color: #fb6d06;
   display: grid;
   grid-template-columns: .3fr 1fr;
   grid-column-gap: 1rem;
@@ -440,7 +454,7 @@ body
 
     .card-author
     {
-      color: $muted-text;
+      color: $paragraph;
       font-size: .75rem;
     }
 
@@ -449,7 +463,6 @@ body
 
   .featured-card-img
   {
-    background-color: #58ff73;
     @media (max-width: $laptop)
     {
       height: 90px;
@@ -624,6 +637,7 @@ body
 }
 /* End of Homepage Styling*/
 
+
 /* Category Title Global Styling */
 .cat
 {
@@ -644,7 +658,6 @@ body
   color: $gk-color;
 }
 
-
 .footer
 {
   font-size: .75rem;
@@ -656,6 +669,7 @@ body
 
 
 /* Start of Article Template Styling*/
+
 //Article Contents
 .article-container
 {
@@ -664,6 +678,7 @@ body
   margin: 0 auto;
   @include flex-center();
 }
+
 .template-article-row
 {
   margin-top: 5rem;
@@ -674,11 +689,20 @@ body
   }
 
 }
+
 .article-body
 {
   width: 80%;
   color: $text;
-
+  p a:nth-child(1)
+  {
+    color: $text;
+    text-decoration: underline;
+  }
+  p a:nth-child(1):hover
+  {
+    color: $muted-text;
+  }
   .cat
   {
     font-size: 1rem;
@@ -731,11 +755,9 @@ body
 
     .article-author-img
     {
-      background-color: #58ff73;
       width: 64px;
       height: 64px;
       background-size: cover;
-      background-image: url("img/hero-ip-carousel.png");
       background-position: center;
       border-radius: 33px;
     }
@@ -783,6 +805,18 @@ body
       line-height: 27px;
       color: $paragraph;
     }
+
+    @media (max-width: $laptop)
+    {
+      border-bottom: 0.5px solid rgba(255,255,255, .5);
+      padding-bottom: 1rem;
+      margin-bottom: 3rem;
+    }
+    .link-to-next
+    {
+      font-size: 1rem;
+      @include font-bold();
+    }
   }
 
 
@@ -792,10 +826,11 @@ body
 .article-sidebar
 {
   
-  @media (max-width: $desktop) {
+  @media (max-width: $desktop)
+  {
     width: 100%;
     align-items: end;
-
+    padding-bottom: 2rem;
   }
 
   @media (max-width: 1199px) and (min-width: 992px)
@@ -807,9 +842,11 @@ body
     align-items: flex-end;
     flex-direction: column;
     margin: 0 auto;
-
-
-
+  
+  @media (min-width: $laptop)
+  {
+    padding-top: 10rem;
+  }
 
 
 }
@@ -817,18 +854,15 @@ body
 {
   width: 18rem;
 
+
   span
   {
     font-size: 1rem;
-    color: $text;
+    color: $paragraph;
     @include font-bold();
-    text-decoration: underline;
+    //text-decoration: underline;
   }
-  @media (max-width: $laptop)
-  {
-    width: 45%;
-    margin-top: 0;
-  }
+
 
   @media (max-width: $landscape)
   {
@@ -844,6 +878,7 @@ body
     flex-direction: row;
     margin: 0 auto;
     padding-left: 1rem;
+
     .sidebar-img
     {
       width: 4rem;
@@ -854,10 +889,15 @@ body
     }
     li a
     {
-      color: $paragraph;
+      color: $text;
       font-size: 1rem;
       @include font-medium();
       text-decoration: underline;
+    }
+
+    li a:hover
+    {
+      color: $muted-text;
     }
 
     .more-resources li
@@ -871,12 +911,12 @@ body
 
 
 }
-/* Start of Article Template Styling*/
+
+/* End of Article Template Styling*/
 
 
 
 /* Start of Topic Page Styling*/
-
 .topics-header
 {
   h1
@@ -987,7 +1027,6 @@ body
 
   .img-box
   {
-    background-color: #fffffe;
     width: 61px;
     height: 55px;
     background-position: center;
@@ -1007,5 +1046,109 @@ body
     -webkit-box-orient: vertical;
     line-height: 27px;
 }
-
 /* End of Topic Page Styling*/
+
+
+/* Start of Team Page Styling */
+.team-container
+{
+  width: 80%;
+  margin: 8rem auto;
+  @media (max-width: $laptop)
+  {
+    width: 100%;
+  }
+
+}
+.team-header
+{
+  text-align: center;
+  color: $text;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  @media (min-width: $laptop)
+  {
+    width: 60%;
+  }
+}
+.team-box
+{
+  width: 487px;
+  margin: 2rem 0;
+  .team-img
+  {
+
+    background-position: center;
+    width: 100%;
+  }
+  .team-content
+  {
+    width: 80%;
+    height: auto;
+    li:nth-child(2)
+    {
+      font-size: 1.625rem;
+      line-height: 33px;
+      @include font-bold();
+      color: $text;
+    }
+    li:nth-child(3)
+    {
+      color: $muted-text;
+      font-size: .75rem;
+      line-height: 20px;
+      padding-bottom: 1rem;
+    }
+    li:nth-child(4)
+    {
+      color: $text;
+      font-size: 1rem;
+      line-height: 27px;
+    }
+    a:hover
+    {
+      text-decoration: none;
+    }
+  }
+}
+/* End of Team Page Styling */
+
+
+/* Start of About Page Styling */
+.about-container
+{
+  padding: 5rem 0;
+  @media (min-width: $desktop)
+  {
+    padding: 10rem 0;
+  }
+}
+
+.about-row
+{
+  margin: 0 1rem;
+  div:nth-child(1)
+  {
+    h1
+    {
+      font-size: 2.625rem;
+      color: $heading;
+      @include font-bold();
+      line-height: 42px;
+    }
+    p{
+      font-size: 1.3rem;
+      color: $paragraph;
+      @include font-regular();
+      line-height: 33px;
+      margin-top: 2rem;
+    }
+    @media (max-width: $desktop)
+    {
+      padding-top: 3rem;
+    }
+  }
+
+}
+/* End of About Page Styling */

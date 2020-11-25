@@ -194,6 +194,16 @@ body
       padding: 10px;
       border: 2px solid #fffffe;
       margin-bottom: 0;
+
+
+    }
+
+    .logo:hover {
+      background-color: $text;
+      a
+      {
+        color: $primary-color;
+      }
     }
 
     .logo-text
@@ -207,10 +217,7 @@ body
     {
       color: $text;
     }
-    a:hover
-    {
-      color: $muted-text;
-    }
+
 
   }
 
@@ -225,7 +232,7 @@ body
 
 /* Start of Homepage Styling*/
 
-//Hero Sytling (Carousel)
+//Hero Styling (Carousel)
 #hero
 {
   width: 100%;
@@ -630,6 +637,7 @@ body
 }
 /* End of Homepage Styling*/
 
+
 /* Category Title Global Styling */
 .cat
 {
@@ -650,7 +658,6 @@ body
   color: $gk-color;
 }
 
-
 .footer
 {
   font-size: .75rem;
@@ -662,6 +669,7 @@ body
 
 
 /* Start of Article Template Styling*/
+
 //Article Contents
 .article-container
 {
@@ -670,6 +678,7 @@ body
   margin: 0 auto;
   @include flex-center();
 }
+
 .template-article-row
 {
   margin-top: 5rem;
@@ -680,6 +689,7 @@ body
   }
 
 }
+
 .article-body
 {
   width: 80%;
@@ -748,7 +758,6 @@ body
       width: 64px;
       height: 64px;
       background-size: cover;
-      background-image: url("img/hero-ip-carousel.png");
       background-position: center;
       border-radius: 33px;
     }
@@ -803,6 +812,11 @@ body
       padding-bottom: 1rem;
       margin-bottom: 3rem;
     }
+    .link-to-next
+    {
+      font-size: 1rem;
+      @include font-bold();
+    }
   }
 
 
@@ -816,7 +830,7 @@ body
   {
     width: 100%;
     align-items: end;
-
+    padding-bottom: 2rem;
   }
 
   @media (max-width: 1199px) and (min-width: 992px)
@@ -844,15 +858,11 @@ body
   span
   {
     font-size: 1rem;
-    color: $text;
+    color: $paragraph;
     @include font-bold();
-    text-decoration: underline;
+    //text-decoration: underline;
   }
-  @media (max-width: $laptop)
-  {
-    width: 45%;
-    margin-top: 0;
-  }
+
 
   @media (max-width: $landscape)
   {
@@ -868,6 +878,7 @@ body
     flex-direction: row;
     margin: 0 auto;
     padding-left: 1rem;
+
     .sidebar-img
     {
       width: 4rem;
@@ -878,7 +889,7 @@ body
     }
     li a
     {
-      color: $paragraph;
+      color: $text;
       font-size: 1rem;
       @include font-medium();
       text-decoration: underline;
@@ -900,12 +911,12 @@ body
 
 
 }
-/* Start of Article Template Styling*/
+
+/* End of Article Template Styling*/
 
 
 
 /* Start of Topic Page Styling*/
-
 .topics-header
 {
   h1
@@ -1035,9 +1046,10 @@ body
     -webkit-box-orient: vertical;
     line-height: 27px;
 }
-
 /* End of Topic Page Styling*/
 
+
+/* Start of Team Page Styling */
 .team-container
 {
   width: 80%;
@@ -1100,3 +1112,43 @@ body
     }
   }
 }
+/* End of Team Page Styling */
+
+
+/* Start of About Page Styling */
+.about-container
+{
+  padding: 5rem 0;
+  @media (min-width: $desktop)
+  {
+    padding: 10rem 0;
+  }
+}
+
+.about-row
+{
+  margin: 0 1rem;
+  div:nth-child(1)
+  {
+    h1
+    {
+      font-size: 2.625rem;
+      color: $heading;
+      @include font-bold();
+      line-height: 42px;
+    }
+    p{
+      font-size: 1.3rem;
+      color: $paragraph;
+      @include font-regular();
+      line-height: 33px;
+      margin-top: 2rem;
+    }
+    @media (max-width: $desktop)
+    {
+      padding-top: 3rem;
+    }
+  }
+
+}
+/* End of About Page Styling */

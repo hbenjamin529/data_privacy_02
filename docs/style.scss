@@ -77,14 +77,15 @@ $gk-color:#fb6d06;
 
 html
 {
+
   @media (max-width:$mobile)
   {
     font-size: 95%;
   }
+  overflow-y: scroll;
 }
 
-body
-{
+body {
   background-color: #0d0d0d;
   padding: 0;
   margin: 0;
@@ -96,8 +97,8 @@ body
 
 .container-fluid
 {
-  margin:0;
-  padding: 0 !important;
+
+  padding: 0;
 }
 
 
@@ -110,17 +111,28 @@ body
   width: 100%;
   @include flex-center();
   background-color: $secondary-color;
+
+}
+
+.main-content
+{
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 //80% width of inner-nav
 .navbar
 {
 
-  width: 80%;
+  width: 100%;
   height: auto;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   color: $text;
-
+  max-width: 1440px;
+  @media (max-width: $landscape)
+  {
+   margin: 0 1rem;
+  }
   .navbar-nav
   {
     background-color: $secondary-color;
@@ -320,30 +332,34 @@ body
 
     position: absolute;
     bottom: 5rem;
+    top: 35%;
     left: 0;
     right: 0;
     text-align: center;
     color: $text;
+    @media (max-width: $landscape)
+    {
+      left: 0;
+      right: 0;
+      top: 70px;
+    }
     h5
     {
       @include font-black();
       font-size: 2.625rem;
       margin-bottom: 2rem;
+      line-height: 62px;
 
-      @media (max-width:$landscape)
-      {
-        margin-bottom: 1rem;
-      }
     }
 
     p
     {
       font-size: 1rem;
       @include font-regular();
-      color: $muted-text;
+      color: $text;
       width: 70ch;
       margin: 0 auto 2rem auto;
-
+      padding: 1rem 0;
       @media (max-width:$landscape)
       {
         width: auto;
@@ -364,6 +380,7 @@ body
       @include font-black();
       border-color: $ds-color;
       color: $primary-color;
+
     }
     .btn:hover
     {
@@ -379,7 +396,7 @@ body
 {
 
   @include flex-center();
-  margin: 5rem 0;
+  margin: 2rem 0;
 
   .featured-cards
   {
@@ -490,26 +507,18 @@ body
 #home-about
 {
   border-top: .5px solid rgba(255,255,255,.4);
-
-
-
 }
 .home-about-container
 {
   @include flex-center();
   flex-direction: column;
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-  @media (max-width: $landscape)
-  {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
+
+
 }
 .home-about-row
 {
   width: 100%;
-  min-height: 60vh;
+  padding: 1rem 0;
   @include flex-center();
   @media (max-width: $landscape)
   {
@@ -587,7 +596,7 @@ body
   }
   h1
   {
-    font-size: 1.625rem;
+    font-size: 2.063rem;
     color: $text;
     padding-bottom: 2rem;
   }
@@ -611,8 +620,8 @@ body
 
 .trivia-box
 {
-  width: 268px;
-  height: 100px;
+  width: 300px;
+  height: 125px;
   background-color: $secondary-color;
   position: relative;
   display: flex;
@@ -623,10 +632,10 @@ body
   {
     padding-top: 1rem;
     color: $paragraph;
-    font-size: .75rem;
-    width: 210px;
-    @include font-bold();
-    line-height: 22px;
+    font-size: 1rem;
+    width: 250px;
+    @include font-regular();
+    line-height: 27px;
   }
   .emoji
   {
@@ -674,7 +683,7 @@ body
 //Article Contents
 .article-container
 {
-
+  max-width: 1440px;
   width: 80%;
   margin: 0 auto;
   @include flex-center();
@@ -840,7 +849,8 @@ body
 //Side bar
 .article-sidebar
 {
-  
+
+
   @media (max-width: $desktop)
   {
     width: 100%;
@@ -902,6 +912,7 @@ body
       background-size: cover;
       background-position: center;
     }
+
     li a
     {
       color: $text;
@@ -917,7 +928,7 @@ body
 
     .more-resources li
     {
-      color: $text;
+      color: #EDEF53;
       font-size: .75rem;
       @include font-bold();
     }
@@ -932,6 +943,10 @@ body
 
 
 /* Start of Topic Page Styling*/
+.topics-container
+{
+  max-width: 1440px;
+}
 .topics-header
 {
   h1
@@ -947,17 +962,16 @@ body
   }
 
 
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding-bottom: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   border-bottom: solid .5px rgba(255,255,255,.5);
 }
 
 .topic-cards
 {
-  padding-bottom: 2rem;
+
   border-bottom: solid .5px rgba(255,255,255,.5);
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .topic-card-header
@@ -965,7 +979,7 @@ body
   width: 100%;
   background-color: $secondary-color;
   padding: 1rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   h1
   {
     font-size: 1.3rem;
@@ -1067,6 +1081,7 @@ body
 /* Start of Team Page Styling */
 .team-container
 {
+  max-width: 1440px;
   width: 80%;
   margin: 8rem auto;
   @media (max-width: $laptop)
@@ -1081,7 +1096,6 @@ body
   color: $text;
   width: 80%;
   margin: 0 auto;
-  padding-bottom: 5rem;
   @media (min-width: $laptop)
   {
     width: 60%;

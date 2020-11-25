@@ -340,7 +340,7 @@ body
     {
       font-size: 1rem;
       @include font-regular();
-      color: $muted-text;
+      color: $text;
       width: 70ch;
       margin: 0 auto 2rem auto;
 
@@ -840,7 +840,8 @@ body
 //Side bar
 .article-sidebar
 {
-  
+
+
   @media (max-width: $desktop)
   {
     width: 100%;
@@ -902,6 +903,7 @@ body
       background-size: cover;
       background-position: center;
     }
+
     li a
     {
       color: $text;
@@ -917,7 +919,7 @@ body
 
     .more-resources li
     {
-      color: $text;
+      color: #EDEF53;
       font-size: .75rem;
       @include font-bold();
     }

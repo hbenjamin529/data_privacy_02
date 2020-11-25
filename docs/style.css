@@ -197,7 +197,7 @@ body {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #ABABAB;
+  color: #fffffe;
   width: 70ch;
   margin: 0 auto 2rem auto;
 }
@@ -679,7 +679,7 @@ body {
   color: #ABABAB;
 }
 .article-featured .sidebar-featured .more-resources li {
-  color: #fffffe;
+  color: #EDEF53;
   font-size: 0.75rem;
   font-family: "Roboto", sans-serif;
   font-weight: 700;

@@ -567,7 +567,7 @@ body
         font-size: 1rem;
         @include font-regular();
         color: $muted-text;
-        line-height: 27px;
+        line-height: 33px;
       }
     }
   }
@@ -612,7 +612,7 @@ body
 .trivia-box
 {
   width: 268px;
-  height: 90px;
+  height: 100px;
   background-color: $secondary-color;
   position: relative;
   display: flex;
@@ -623,9 +623,10 @@ body
   {
     padding-top: 1rem;
     color: $paragraph;
-    font-size: 12px;
+    font-size: .75rem;
     width: 210px;
     @include font-bold();
+    line-height: 22px;
   }
   .emoji
   {
@@ -802,8 +803,25 @@ body
     p
     {
       font-size: 1rem;
-      line-height: 27px;
+      line-height: 32px;
       color: $paragraph;
+      padding-bottom: 1rem;
+    }
+    h5
+    {
+      font-size: 1.3rem;
+      line-height: 33px;
+      @include font-medium();
+      padding-bottom: 1rem;
+    }
+    ol li p
+    {
+      margin-top: 1rem;
+    }
+
+    .link-to-next
+    {
+      @include font-bold();
     }
 
     @media (max-width: $laptop)
@@ -812,11 +830,8 @@ body
       padding-bottom: 1rem;
       margin-bottom: 3rem;
     }
-    .link-to-next
-    {
-      font-size: 1rem;
-      @include font-bold();
-    }
+
+
   }
 
 
@@ -1104,7 +1119,7 @@ body
     {
       color: $text;
       font-size: 1rem;
-      line-height: 27px;
+      line-height: 33px;
     }
     a:hover
     {
@@ -1138,7 +1153,7 @@ body
       line-height: 42px;
     }
     p{
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: $paragraph;
       @include font-regular();
       line-height: 33px;

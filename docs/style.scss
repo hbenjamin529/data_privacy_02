@@ -1100,3 +1100,40 @@ body
     }
   }
 }
+
+
+.about-container
+{
+  padding: 5rem 0;
+  @media (min-width: $desktop)
+  {
+    padding: 10rem 0;
+  }
+}
+
+.about-row
+{
+  margin: 0 1rem;
+  div:nth-child(1)
+  {
+    h1
+    {
+      font-size: 2.625rem;
+      color: $heading;
+      @include font-bold();
+      line-height: 42px;
+    }
+    p{
+      font-size: 1.3rem;
+      color: $paragraph;
+      @include font-regular();
+      line-height: 33px;
+      margin-top: 2rem;
+    }
+    @media (max-width: $desktop)
+    {
+      padding-top: 3rem;
+    }
+  }
+
+}

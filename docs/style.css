@@ -893,6 +893,10 @@ body {
     padding-top: 3rem;
   }
 }
+.about-row div:nth-child(1) .about-img {
+  height: 100%;
+  width: 100%;
+}
 
 /* End of About Page Styling */
 

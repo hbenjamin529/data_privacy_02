@@ -389,7 +389,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #ABABAB;
-  line-height: 27px;
+  line-height: 33px;
 }
 
 .trivia-container {
@@ -423,7 +423,7 @@ body {
 
 .trivia-box {
   width: 268px;
-  height: 90px;
+  height: 100px;
   background-color: #121212;
   position: relative;
   display: flex;
@@ -434,10 +434,11 @@ body {
 .trivia-box p:nth-child(1) {
   padding-top: 1rem;
   color: #dcdcdc;
-  font-size: 12px;
+  font-size: 0.75rem;
   width: 210px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
+  line-height: 22px;
 }
 .trivia-box .emoji {
   position: absolute;
@@ -587,8 +588,23 @@ body {
 }
 .article-body .article-content p {
   font-size: 1rem;
-  line-height: 27px;
+  line-height: 32px;
   color: #dcdcdc;
+  padding-bottom: 1rem;
+}
+.article-body .article-content h5 {
+  font-size: 1.3rem;
+  line-height: 33px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.article-body .article-content ol li p {
+  margin-top: 1rem;
+}
+.article-body .article-content .link-to-next {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 @media (max-width: 992px) {
   .article-body .article-content {
@@ -596,11 +612,6 @@ body {
     padding-bottom: 1rem;
     margin-bottom: 3rem;
   }
-}
-.article-body .article-content .link-to-next {
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
 }
 
 .article-sidebar {
@@ -842,7 +853,7 @@ body {
 .team-box .team-content li:nth-child(4) {
   color: #fffffe;
   font-size: 1rem;
-  line-height: 27px;
+  line-height: 33px;
 }
 .team-box .team-content a:hover {
   text-decoration: none;
@@ -870,7 +881,7 @@ body {
   line-height: 42px;
 }
 .about-row div:nth-child(1) p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #dcdcdc;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -881,6 +892,10 @@ body {
   .about-row div:nth-child(1) {
     padding-top: 3rem;
   }
+}
+.about-row div:nth-child(1) .about-img {
+  height: 100%;
+  width: 100%;
 }
 
 /* End of About Page Styling */

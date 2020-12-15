@@ -583,40 +583,7 @@ body {
 
 }
 
-//Trivia Section
-.trivia-container
-{
-  border-top: .5px solid rgba(255,255,255,.4);
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-  @media (max-width: $landscape)
-  {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  h1
-  {
-    font-size: 2.063rem;
-    color: $text;
-    padding-bottom: 2rem;
-  }
 
-}
-.trivia-row
-{
-  height: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .trivia-item
-  {
-    @media (max-width: $landscape)
-    {
-      margin-bottom: 2rem;
-    }
-  }
-}
 
 .trivia-box
 {
@@ -627,7 +594,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  //margin: 1rem auto;
   p:nth-child(1)
   {
     padding-top: 1rem;
@@ -873,6 +840,17 @@ body {
     padding-top: 10rem;
   }
 
+  .article-trivia
+  {
+    margin-top: 2rem;
+    h3
+    {
+      font-size: 1rem;
+      color: #dcdcdc;
+      @include font-bold();
+      margin-bottom: 1rem;
+    }
+  }
 
 }
 .article-featured

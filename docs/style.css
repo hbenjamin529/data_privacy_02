@@ -898,5 +898,57 @@ body {
 }
 
 /* End of About Page Styling */
+.more-container {
+  border-top: 1px solid #dcdcdc;
+  padding-bottom: 2rem;
+  color: #fffffe;
+}
+.more-container h3 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+@media screen and (max-width: 780px) {
+  .more-container h3 {
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+.more {
+  padding-top: 1rem;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+@media screen and (max-width: 780px) {
+  .more {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.more .more-box {
+  min-width: 80px;
+  max-height: 64px;
+  margin-right: 1rem;
+}
+@media screen and (max-width: 780px) {
+  .more {
+    padding-bottom: 1rem;
+  }
+}
+.more .more-img img {
+  min-width: 80px;
+  max-height: 64px;
+}
+.more .more-info span {
+  font-size: 13px;
+  color: #EDEF53;
+  font-weight: 500;
+}
+.more .more-info h4 {
+  font-size: 1rem;
+}
+.more .more-info a {
+  color: #fffffe;
+}
 
 /*# sourceMappingURL=style.css.map */

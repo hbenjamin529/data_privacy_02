@@ -1168,3 +1168,71 @@ body {
 
 }
 /* End of About Page Styling */
+.more-container
+{
+  border-top: 1px solid #dcdcdc;
+  padding-bottom: 2rem;
+  color: #fffffe;
+  h3
+  {
+    margin-top: 1rem;
+    font-size: 1rem;
+
+    @media screen and (max-width: 780px)
+    {
+      text-align: center;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.more
+{
+  padding-top: 1rem;
+  display: flex;
+
+  @media screen and (max-width: 780px)
+  {
+    justify-content: center;
+    align-items: center;
+  }
+  font-family: 'Roboto',sans-serif;
+  .more-box
+  {
+    min-width: 80px;
+    max-height: 64px;
+    margin-right: 1rem;
+
+  }
+  @media screen and (max-width: 780px)
+  {
+    padding-bottom: 1rem;
+
+  }
+  .more-img
+  {
+    img
+    { min-width: 80px;
+      max-height: 64px;
+
+    }
+
+  }
+  .more-info
+  {
+    span
+    {
+      font-size: 13px;
+      color: #EDEF53;
+      font-weight: 500;
+    }
+    h4
+    {
+      font-size: 1rem;
+    }
+    a
+    {
+      color: #fffffe;
+    }
+  }
+}

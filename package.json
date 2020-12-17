@@ -1,0 +1,26 @@
+{
+  "name": "data_privacy",
+  "version": "1.0.0",
+  "description": "1. Created by:\r * Hannah Benjamin\r * Christian Domacena",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjdomacena/data_privacy_02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjdomacena/data_privacy_02/issues"
+  },
+  "homepage": "https://github.com/cjdomacena/data_privacy_02#readme",
+  "dependencies": {
+    "sass": "^1.30.0"
+  }
+}

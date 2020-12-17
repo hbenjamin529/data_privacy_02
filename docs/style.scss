@@ -248,6 +248,7 @@ body {
 #hero
 {
   width: 100%;
+  max-width: 1440px;
   display: grid;
   place-items: center;
   padding-top: 2rem;
@@ -272,7 +273,7 @@ body {
   {
 
 
-    width: 80%;
+    width: 100%;
 
     //Add additional height to indications
     li
@@ -365,11 +366,14 @@ body {
         width: auto;
       }
     }
-
-
-    @media (max-width:767.98px)
+    @media screen and (max-width: 800px)
     {
       bottom: 5rem;
+    }
+    @media (max-width:500px)
+    {
+      //bottom: 5rem;
+      top: 50px;
       width: 90%;
     }
 
@@ -583,40 +587,7 @@ body {
 
 }
 
-//Trivia Section
-.trivia-container
-{
-  border-top: .5px solid rgba(255,255,255,.4);
-  padding-top: 3rem;
-  padding-bottom: 7rem;
-  @media (max-width: $landscape)
-  {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  h1
-  {
-    font-size: 2.063rem;
-    color: $text;
-    padding-bottom: 2rem;
-  }
 
-}
-.trivia-row
-{
-  height: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .trivia-item
-  {
-    @media (max-width: $landscape)
-    {
-      margin-bottom: 2rem;
-    }
-  }
-}
 
 .trivia-box
 {
@@ -627,7 +598,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  //margin: 1rem auto;
   p:nth-child(1)
   {
     padding-top: 1rem;
@@ -873,6 +844,17 @@ body {
     padding-top: 10rem;
   }
 
+  .article-trivia
+  {
+    margin-top: 2rem;
+    h3
+    {
+      font-size: 1rem;
+      color: #dcdcdc;
+      @include font-bold();
+      margin-bottom: 1rem;
+    }
+  }
 
 }
 .article-featured
@@ -1186,3 +1168,71 @@ body {
 
 }
 /* End of About Page Styling */
+.more-container
+{
+  border-top: 1px solid #dcdcdc;
+  padding-bottom: 2rem;
+  color: #fffffe;
+  h3
+  {
+    margin-top: 1rem;
+    font-size: 1rem;
+
+    @media screen and (max-width: 780px)
+    {
+      text-align: center;
+      padding-top: 1rem;
+    }
+  }
+}
+
+.more
+{
+  padding-top: 1rem;
+  display: flex;
+
+  @media screen and (max-width: 780px)
+  {
+    justify-content: center;
+    align-items: center;
+  }
+  font-family: 'Roboto',sans-serif;
+  .more-box
+  {
+    min-width: 80px;
+    max-height: 64px;
+    margin-right: 1rem;
+
+  }
+  @media screen and (max-width: 780px)
+  {
+    padding-bottom: 1rem;
+
+  }
+  .more-img
+  {
+    img
+    { min-width: 80px;
+      max-height: 64px;
+
+    }
+
+  }
+  .more-info
+  {
+    span
+    {
+      font-size: 13px;
+      color: #EDEF53;
+      font-weight: 500;
+    }
+    h4
+    {
+      font-size: 1rem;
+    }
+    a
+    {
+      color: #fffffe;
+    }
+  }
+}
